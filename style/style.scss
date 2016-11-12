@@ -1,0 +1,93 @@
+body{
+  background-image: url(../images/bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: sans-serif;
+}
+
+.width{
+  margin: 0 auto;
+  width: 1000px;
+
+  @media (max-width: 999px){
+    width: 700px;
+  }
+  @media (max-width: 699px){
+    width: auto;
+    margin: 0;
+  }
+}
+
+.header{
+  margin: 100px 0 50px;
+  &__logo{
+    color: white;
+    font-size: 36px;
+    text-decoration: none;
+
+    img{
+      height: 50px;
+      margin: 0 1em 0 0;
+      vertical-align: middle;
+    }
+  }
+}
+
+.chat-window{
+  background: rgba(0,0,0, 0.7);
+    padding: 1em 0;
+
+  &__header,
+  &__input-area,
+  &__chat-area{
+    padding: 0 1em;
+  }
+
+
+  &__header{
+    a{
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0.5em 2em;
+      margin: 0 1em 1em 0;
+
+      background: gray;
+      &:hover{
+        background: darken(gray, 30);
+      }
+    }
+  }
+  &__chat-viewport{
+    background: white;
+    height: 400px;
+    overflow-y: scroll;
+  }
+
+
+  &__new-message-field{
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%; 
+    padding: 1em;
+  }
+}
+
+.chat-message{
+  padding: 1em;
+
+  &__author{
+    font-weight: bold;
+  }
+  &_client &__author{
+    color: red;
+  }
+  &_operator &__author{
+    color: blue;
+  }
+}
